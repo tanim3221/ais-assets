@@ -189,7 +189,7 @@
         text-align: center !important;
     }
     .ais_member_nav .navbar-toggler-icon {
-        background-image: url(../../icon/nav.svg);
+        background-image: url(https://raw.githubusercontent.com/tanim3221/ais-assets/main/icon/nav.svg);
     }
     div#ais_family_credentials_length,
     div#ais_family_gallery_length,

@@ -121,7 +121,7 @@
 */
 
 html {
-    background: url("../../icon/background.png") repeat fixed !important;
+    background: url("https://raw.githubusercontent.com/tanim3221/ais-assets/main/icon/background.png") repeat fixed !important;
 }
 
 .notice_batch_content.scroll_body {
@@ -679,7 +679,7 @@ a:hover {
 }
 
 .add_info_users_top {
-    background-image: url('../../icon/cover2.svg')!important;
+    background-image: url('https://cdn.jsdelivr.net/gh/tanim3221/ais-assets@latest/icon/cover2.svg')!important;
     background-repeat: no-repeat!important;
     background-size: 85%!important;
     background-position: center!important;
@@ -714,7 +714,7 @@ a:hover {
 }
 
 .loogedin_info_edit_top {
-    background-image: url('../../icon/cover2.svg');
+    background-image: url('https://raw.githubusercontent.com/tanim3221/ais-assets/main/icon/cover2.svg');
     background-repeat: no-repeat;
     background-size: 85%;
     background-position: center;
