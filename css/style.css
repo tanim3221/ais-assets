@@ -1609,8 +1609,8 @@ html {
 .inside_spin .spinner_log {
     position: absolute;
     z-index: 3;
-    top: -7px;
-    left: 0px;
+    top: 45px;
+    right: 15px;
     margin: 0;
     padding: 0;
     overflow: hidden;
