@@ -117,3 +117,113 @@ $(function() {
     }
 
 });
+
+
+$(document).on('click', '#file_view_btn', function(e) {
+    var title = $(this).data('title');
+    var id = $(this).data('id');
+    var modal = '#myModalFileView';
+    var view = '#modal_file_view_content';
+    var url = 'viewer.php?id=' + id + '&view&title=' + title;
+    $(".modal_file_view_title").html(title);
+    getDetailsViewInfo(url, modal, view);
+});
+
+$(document).on('click', '#view_btn_stds', function(e) {
+    var modal = '#myModalInfo';
+    var view = '#web_content_info';
+    var cat = 'students';
+    var id = $(this).data('id');
+    var batch = $(this).data('batch');
+    var url = 'qr_generate.php?' + cat + '&id=' + id + '&batch=' + batch;
+    getDetailsViewInfo(url, modal, view);
+});
+
+$(document).on('click', '#view_btn_tea', function(e) {
+    var modal = '#myModalInfo';
+    var view = '#web_content_info';
+    var cat = 'teachers';
+    var id = $(this).data('id');
+    var url = 'qr_generate.php?' + cat + '&id=' + id;
+    getDetailsViewInfo(url, modal, view);
+});
+$(document).on('click', '#login_info_batch_wise', function(e) {
+    var modal = '#myModalLoginInfo';
+    var view = '#login_view_info';
+    var batch = $(this).data('batch');
+    $('.modal_login_info_title').html('Login Info ' + batch + ' Batch');
+    var url = 'qr_generate.php?login_info_batch_wise&batch=' + batch;
+    getDetailsViewInfo(url, modal, view);
+});
+$(document).on('click', '#actual_login_info_batch_wise', function(e) {
+    var modal = '#myModalLoginInfo';
+    var view = '#login_view_info';
+    var batch = $(this).data('batch');
+    $('.modal_login_info_title').html('Login Info ' + batch + ' Batch');
+    var url = 'qr_generate.php?actual_view&login_info_batch_wise&batch=' + batch;
+    getDetailsViewInfo(url, modal, view);
+});
+
+$(document).on('click', '#today_login_info_batch_wise', function(e) {
+    var modal = '#myModalLoginInfo';
+    var view = '#login_view_info';
+    var batch = $(this).data('batch');
+    $('.modal_login_info_title').html('Login Info ' + batch + ' Batch');
+    var url = 'qr_generate.php?today_view&login_info_batch_wise&batch=' + batch;
+    getDetailsViewInfo(url, modal, view);
+});
+
+function getDetailsViewInfo(url, modal, view) {
+    $(modal).modal({
+        show: true
+    });
+    $.ajax({
+        url: url,
+        dataType: 'html',
+        success: function(response) {
+            $(view).html(response);
+            $('.spinner_log').hide();
+            console.log("success");
+        }
+    });
+}
+
+$(document).ready(function() {
+    $("#link_copy").click(function(event) {
+        event.preventDefault();
+        var link = $(this).data('link');
+        CopyToClipboard(link, true, "Link copied successfully.");
+    });
+});
+
+function CopyToClipboard(value, showNotification, notificationText) {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val(value).select();
+    document.execCommand("copy");
+    $temp.remove();
+
+    if (typeof showNotification === 'undefined') {
+        showNotification = true;
+    }
+    if (typeof notificationText === 'undefined') {
+        notificationText = "Copied to clipboard";
+    }
+
+    var notificationTag = $("div.copy-notification");
+    if (showNotification && notificationTag.length == 0) {
+        notificationTag = $("<div/>", {
+            "class": "copy-notification",
+            text: notificationText
+        });
+        $("body").append(notificationTag);
+
+        notificationTag.fadeIn("slow", function() {
+            setTimeout(function() {
+                notificationTag.fadeOut("slow", function() {
+                    notificationTag.remove();
+                });
+            }, 2000);
+        });
+    }
+}

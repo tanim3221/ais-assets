@@ -194,7 +194,7 @@
         text-align: center !important;
     }
     .ais_member_nav .navbar-toggler-icon {
-        background-image: url(https://raw.githubusercontent.com/tanim3221/ais-assets/main/icon/nav.svg);
+        background-image: url('../../ais-assets/icon/nav.svg');
     }
     div#ais_family_credentials_length,
     div#ais_family_gallery_length,
@@ -781,12 +781,14 @@
     .add_gallery_nav_id,
     .explore_more_content_main,
     .loogedin_info_edit_left_right,
+    .desktop_gallery_view_content,
+    .mobile_gallery_view_content,
     .about_more_view.about_database.item_view_nav,
     .log_more_view.activity_log.item_view_nav {
-        margin-bottom: 150px;
+        margin-bottom: 120px!important;
     }
     .gallery_update_view {
-        margin-bottom: 150px;
+        margin-bottom: 120px;
     }
     .link_more_view.important_links.item_view_nav:hover,
     .log_more_view.activity_log.item_view_nav:hover,
@@ -819,10 +821,10 @@
         width: 95%;
         box-shadow: none;
         overflow: hidden;
-        margin-bottom: 100px;
+        margin-bottom: 100px!important;
     }
-    .center-login.add_info_users.container.add_teachers_info .add_info_users_top {
-        margin-bottom: 15px;
+    .sorting_search_view {
+        width: 100%;
     }
     .center-login.add_info_users.container {
         width: 95%;
@@ -835,7 +837,7 @@
         flex-direction: column;
     }
     .modal-content {
-        margin-bottom: 50px;
+        margin-bottom: 45px;
     }
     .modal-header.view_std {
         position: absolute;
@@ -846,6 +848,19 @@
         cursor: pointer;
         pointer-events: all;
         border: 0;
+    }
+    #bsPhotoGalleryModal .bsp-close {
+        position: absolute;
+        right: 3;
+        top: 3;
+        background: rgba(236, 236, 236, 0.89);
+        padding: 5px;
+        border-radius: 50%;
+        border: 0;
+    }
+    #bsPhotoGalleryModal .modal-dialog img {
+        border-radius: 0;
+        height: 100%;
     }
 }
 

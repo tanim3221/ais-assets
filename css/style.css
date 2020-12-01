@@ -119,7 +119,7 @@
 */
 
 html {
-    background: url("https://raw.githubusercontent.com/tanim3221/ais-assets/main/icon/background.png") repeat fixed !important;
+    background: url("../../ais-assets/icon/background.png") repeat fixed !important;
 }
 
 .notice_batch_content.scroll_body {
@@ -243,15 +243,18 @@ html {
     display: inline-block;
 }
 
+.center-login.add_info_users.container.add_teachers_info .add_info_users_top {
+    margin-bottom: 15px;
+}
+
 .copy-notification {
     color: #ffffff;
     background-color: #130677;
-    padding: 15px;
-    border-radius: 10px;
+    padding: 10px 15px;
+    border-radius: 7px;
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 150px;
     margin-top: -30px;
     margin-left: -85px;
     display: none;
@@ -294,10 +297,14 @@ html {
 }
 
 img.upload_gallery_img {
-    height: 200px;
-    width: 250px;
+    width: 100%;
     margin-bottom: 25px;
-    border-radius: 5px;
+    border-radius: 0;
+    height: auto;
+}
+
+#myModalFileView .modal-dialog {
+    height: 100%;
 }
 
 #dev_gallery_view {
@@ -665,6 +672,11 @@ a:hover {
     font-size: 14px;
 }
 
+.center-login.add_info_users.container {
+    padding: 0 !important;
+    margin: 15px auto;
+}
+
 .add_info_users {
     top: 100%!important;
     position: inherit!important;
@@ -677,7 +689,7 @@ a:hover {
 }
 
 .add_info_users_top {
-    background-image: url('https://cdn.jsdelivr.net/gh/tanim3221/ais-assets@latest/icon/cover2.svg')!important;
+    background-image: url('../../ais-assets/icon/cover2.svg')!important;
     background-repeat: no-repeat!important;
     background-size: 85%!important;
     background-position: center!important;
@@ -712,7 +724,7 @@ a:hover {
 }
 
 .loogedin_info_edit_top {
-    background-image: url('https://raw.githubusercontent.com/tanim3221/ais-assets/main/icon/cover2.svg');
+    background-image: url('../../ais-assets/icon/cover2.svg');
     background-repeat: no-repeat;
     background-size: 85%;
     background-position: center;
@@ -1113,8 +1125,20 @@ div#myDropdown p {
 
 .container.ais_family {
     background: #fff;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding: 0;
+}
+
+.desktop_gallery_view,
+.my_gallery_view,
+.admin_gallery_view {
+    padding: 15px;
+}
+
+.gallery_update_view .img-show {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 7px;
 }
 
 .dropbtn {
@@ -1229,7 +1253,7 @@ table {
     border-collapse: collapse;
     table-layout: fixed;
     font-size: 13px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
 table tr {
@@ -1424,7 +1448,7 @@ html {
     padding: 0;
     height: 100%;
     width: 92%;
-    font-family: 'Montserrat', 'SolaimanLipi', sans-serif;
+    font-family: 'Arial', 'SolaimanLipi', sans-serif;
     font-size: 14px;
 }
 
