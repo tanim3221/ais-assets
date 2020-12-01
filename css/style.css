@@ -1601,6 +1601,21 @@ html {
     align-items: center;
 }
 
+.mdi-spin::before {
+    -webkit-animation: mdi-spin 1s infinite linear!important;
+    animation: mdi-spin 1s infinite linear!important;
+}
+
+.inside_spin .spinner_log {
+    position: absolute;
+    z-index: 3;
+    top: -7px;
+    left: 0px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
 @media print {
     body,
     html {
