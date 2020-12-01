@@ -866,8 +866,9 @@
         height: 100%;
     }
     .inside_spin .spinner_log {
-        top: 0px;
-        left: 8px;
+        top: 0;
+        left: 10px;
+        right: inherit;
     }
 }
 
