@@ -787,6 +787,9 @@
     .log_more_view.activity_log.item_view_nav {
         margin-bottom: 120px!important;
     }
+    .body_wrapper_custom {
+        margin-bottom: 60px!important;
+    }
     .gallery_update_view {
         margin-bottom: 120px;
     }
