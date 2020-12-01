@@ -87,6 +87,7 @@ $(function() {
         var show = '.log_more_view';
         var title = 'Activity Log';
         viewWindow(title, show, hide);
+        $('.spinner_log').show();
 
         $.ajax({
             url: 'qr_generate.php?activitty_info_date_wise',
@@ -177,6 +178,7 @@ function getDetailsViewInfo(url, modal, view) {
     $(modal).modal({
         show: true
     });
+    $('.spinner_log').show();
     $.ajax({
         url: url,
         dataType: 'html',
