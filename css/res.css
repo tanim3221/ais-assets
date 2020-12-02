@@ -896,10 +896,6 @@
     .loggedin_more_view.users_loggedin_info_view.item_view_nav .row-c {
         border-radius: 7px;
     }
-    .loggedin_div {
-        max-height: 300px;
-        overflow: auto;
-    }
     .loggedin_more_view.users_loggedin_info_view.item_view_nav .col-md-6-c {
         background: #e4e4e4;
         padding: 15px;
