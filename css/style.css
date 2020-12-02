@@ -26,6 +26,10 @@
     transform: translate(50%);
 }
 
+#notifications {
+    display: none;
+}
+
 .body_wrapper_custom {
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
 }
@@ -1614,6 +1618,42 @@ html {
     margin: 0;
     padding: 0;
     overflow: hidden;
+}
+
+.hall_name_body {
+    border-radius: 7px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 25px 25px;
+    width: 30%;
+    background: #fff;
+}
+
+.hall_name_body ul li a {
+    white-space: normal;
+}
+
+.hall_name_wrapper {
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.hall_name_body .dropdown-menu {
+    width: 100%;
+}
+
+.mobile_nav_title_hall {
+    border: 0;
+    margin-bottom: 30px;
 }
 
 @media print {

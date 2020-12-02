@@ -163,7 +163,6 @@
     }
     .iconic-body {
         padding: 35px 15px !important;
-        margin-bottom: 60px;
     }
     .upload-btn {
         text-align: center;
@@ -232,9 +231,6 @@
     .others_batch_btn {
         display: none;
     }
-    #navbar_btn {
-        display: none;
-    }
     .login_title {
         font-size: 30px;
         margin-bottom: 25px;
@@ -271,6 +267,7 @@
     }
     .header_title {
         display: block;
+        margin: 0;
         color: #ffffff;
         font-family: Titillium Web, Hind Siliguri;
     }
@@ -783,9 +780,15 @@
     .loogedin_info_edit_left_right,
     .desktop_gallery_view_content,
     .mobile_gallery_view_content,
+    .iconic-body,
+    #birthday_view_item:last-child,
+    .loggedin_more_view.users_loggedin_info_view.item_view_nav,
     .about_more_view.about_database.item_view_nav,
     .log_more_view.activity_log.item_view_nav {
         margin-bottom: 120px!important;
+    }
+    .body_wrapper_custom {
+        box-shadow: none;
     }
     .body_wrapper_custom {
         margin-bottom: 60px!important;
@@ -796,6 +799,7 @@
     .link_more_view.important_links.item_view_nav:hover,
     .log_more_view.activity_log.item_view_nav:hover,
     .about_more_view.about_database.item_view_nav:hover,
+    .loggedin_more_view.users_loggedin_info_view.item_view_nav,
     .all_batch_short_link.item_view_nav:hover {
         background: transparent;
     }
@@ -869,6 +873,61 @@
         top: 0;
         left: 10px;
         right: inherit;
+    }
+    .pro_bd img {
+        width: 30px;
+        height: 30px;
+    }
+    .pro_bd {
+        width: 30px!important;
+        height: 30px!important;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    #notifications {
+        padding: 0;
+        display: block;
+    }
+    .loggedin_more_view.users_loggedin_info_view.item_view_nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .loggedin_more_view.users_loggedin_info_view.item_view_nav .row-c {
+        border-radius: 7px;
+    }
+    .loggedin_div {
+        max-height: 300px;
+        overflow: auto;
+    }
+    .loggedin_more_view.users_loggedin_info_view.item_view_nav .col-md-6-c {
+        background: #e4e4e4;
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .loggedin_more_view.users_loggedin_info_view.item_view_nav .row-c .col-md-6-c a {
+        color: rgb(95, 95, 95);
+        border: 0!important;
+    }
+    .loggedin_more_view.users_loggedin_info_view.item_view_nav .col-md-6-c:hover {
+        background: #cacaca;
+    }
+    .loggedin_more_view.users_loggedin_info_view.item_view_nav .col-md-6-c:first-child {
+        border-radius: 7px 0px 0px 7px;
+    }
+    .loggedin_more_view.users_loggedin_info_view.item_view_nav .col-md-6-c:last-child {
+        border-radius: 0px 7px 7px 0px;
+    }
+    div#notifications {
+        display: none;
+    }
+    .hall_name_body {
+        border-radius: 0;
+        width: 100%;
+        top: 0;
+        transform: translate(-50%);
     }
 }
 

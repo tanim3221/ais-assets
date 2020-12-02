@@ -8,7 +8,7 @@ $(function() {
         e.preventDefault();
         var title = 'Gallery';
         var show = '.gallery_view';
-        var hide = '.mobile_nav_wrapper_search,.document_view, .explore_view,.more_view, .log_more_view,  .notice_explore_view,.about_more_view, .link_more_view';
+        var hide = '.loggedin_more_view, .notifications,.wish_birthday, .bd_wish_more_view, .mobile_nav_wrapper_search,.document_view, .explore_view,.more_view, .log_more_view,  .notice_explore_view,.about_more_view, .link_more_view';
         viewWindow(title, show, hide);
         console.log('Gallery Tab');
     })
@@ -16,7 +16,7 @@ $(function() {
         e.preventDefault();
         var title = 'Document';
         var show = '.document_view';
-        var hide = '.mobile_nav_wrapper_search,.gallery_view,.explore_view,.more_view, .log_more_view, .notice_explore_view,.about_more_view, .link_more_view';
+        var hide = '.loggedin_more_view,.notifications,.wish_birthday,.bd_wish_more_view, .mobile_nav_wrapper_search,.gallery_view,.explore_view,.more_view, .log_more_view, .notice_explore_view,.about_more_view, .link_more_view';
         viewWindow(title, show, hide);
         console.log('Document Tab');
     })
@@ -24,7 +24,7 @@ $(function() {
         e.preventDefault();
         var title = 'More';
         var show = '.more_view';
-        var hide = '.mobile_nav_wrapper_search,.gallery_view,.explore_view,.document_view, .log_more_view,  .notice_explore_view ,.about_more_view, .link_more_view';
+        var hide = '.loggedin_more_view,.notifications,.wish_birthday,.bd_wish_more_view, .mobile_nav_wrapper_search,.gallery_view,.explore_view,.document_view, .log_more_view,  .notice_explore_view ,.about_more_view, .link_more_view';
         viewWindow(title, show, hide);
         console.log('More Tab');
     })
@@ -32,11 +32,52 @@ $(function() {
         e.preventDefault();
         var title = 'Explore';
         var show = '.explore_view';
-        var hide = '.mobile_nav_wrapper_search, .gallery_view,.more_view,.document_view, .log_more_view,  .about_more_view, .notice_explore_view, .link_more_view';
+        var hide = '.loggedin_more_view,.notifications,.wish_birthday,.bd_wish_more_view, .mobile_nav_wrapper_search, .gallery_view,.more_view,.document_view, .log_more_view,  .about_more_view, .notice_explore_view, .link_more_view';
         var short_link = $('.explore_more_content').html();
         $('.all_batch_short_link').html(short_link);
         viewWindow(title, show, hide);
         console.log('Explore Tab');
+    })
+    $(document).on('click', '.dropbtn_nav', function(e) {
+        e.preventDefault();
+        var title = $(this).data('name');
+        var show = '.users_loggedin_info_view';
+        var hide = '.notifications,.wish_birthday,.bd_wish_more_view, .mobile_nav_wrapper_search, .gallery_view,.more_view,.document_view, .log_more_view,  .about_more_view, .notice_explore_view, .link_more_view';
+        var short_link = $('.users_loggedin_info').html();
+        $('.users_loggedin_info_view').html(short_link);
+        viewWindow(title, show, hide);
+        console.log('LoggedIn Info Tab');
+    })
+    $(document).on('click', '#birthday_view_title', function(e) {
+            e.preventDefault();
+            var date = $(this).data('date');
+            var title = 'Birthday Today';
+            var show = '.bd_wish_more_view';
+            var hide = '.loggedin_more_view,.notifications,.wish_birthday,.explore_view, .mobile_nav_wrapper_search, .gallery_view,.more_view,.document_view, .log_more_view,  .about_more_view, .notice_explore_view, .link_more_view';
+            viewWindow(title, show, hide);
+            console.log(title + ' Tab');
+        })
+        /*
+            $(document).on('click', '#birthday_view_item', function(e) {
+                e.preventDefault();
+                var batch = $(this).data('batch');
+                var studentid = $(this).data('studentid');
+                var name = $(this).data('name');
+                var id = $(this).data('id'); 
+                var title = 'Birthday Wish ' + name;
+                var show = '.wish_birthday';
+                var hide = '.loggedin_more_view,.notifications,.bd_wish_more_view, .explore_view, .mobile_nav_wrapper_search, .gallery_view,.more_view,.document_view, .log_more_view,  .about_more_view, .notice_explore_view, .link_more_view';
+                viewWindow(title, show, hide);
+                console.log(title + ' Tab');
+            })
+        */
+    $(document).on('click', '#notifications', function(e) {
+        e.preventDefault();
+        var title = 'Notifications';
+        var show = '.notifications';
+        var hide = '.loggedin_more_view,.wish_birthday,.bd_wish_more_view, .explore_view, .mobile_nav_wrapper_search, .gallery_view,.more_view,.document_view, .log_more_view,  .about_more_view, .notice_explore_view, .link_more_view';
+        viewWindow(title, show, hide);
+        console.log(title + ' Tab');
     })
 
     $(document).on('click', '.search_nav', function(e) {
@@ -59,7 +100,7 @@ $(function() {
     })
     $(document).on('click', '#important_links_all_view', function(e) {
         e.preventDefault();
-        var hide = '.mobile_nav_wrapper_search,.gallery_view,.explore_view,.document_view, .more_view';
+        var hide = '.notifications,.bd_wish_more_view, .mobile_nav_wrapper_search,.gallery_view,.explore_view,.document_view, .more_view';
         var show = '.link_more_view';
         var title = 'Important Links';
         viewWindow(title, show, hide);
@@ -68,7 +109,7 @@ $(function() {
     })
     $(document).on('click', '#about_database', function(e) {
         e.preventDefault();
-        var hide = '.mobile_nav_wrapper_search,.gallery_view,.explore_view,.document_view, .more_view, .link_more_view';
+        var hide = '.bd_wish_more_view, .mobile_nav_wrapper_search,.gallery_view,.explore_view,.document_view, .more_view, .link_more_view';
         var show = '.about_more_view';
         var title = 'About Database';
         viewWindow(title, show, hide);
@@ -82,8 +123,8 @@ $(function() {
     })
     $(document).on('click', '#activity_log_nav', function(e) {
         e.preventDefault();
-        console.log("ffffff");
-        var hide = '.mobile_nav_wrapper_search,.gallery_view,.explore_view,.document_view, .more_view, .link_more_view';
+        console.log("Activity log Clicked");
+        var hide = '.bd_wish_more_view, .mobile_nav_wrapper_search,.gallery_view,.explore_view,.document_view, .more_view, .link_more_view';
         var show = '.log_more_view';
         var title = 'Activity Log';
         viewWindow(title, show, hide);
@@ -95,8 +136,7 @@ $(function() {
             success: function(response) {
                 $('.log_more_view.activity_log').html(response);
                 $('.spinner_log').hide();
-                console.log(response);
-                console.log("ffffff");
+                console.log("Activity log Success");
             }
         });
     })
@@ -114,7 +154,6 @@ $(function() {
         $('.mobile_nav_wrapper').show();
         $(show).show();
         $(hide).hide();
-        console.log('clicked');
     }
 
 });
@@ -130,7 +169,7 @@ $(document).on('click', '#file_view_btn', function(e) {
     getDetailsViewInfo(url, modal, view);
 });
 
-$(document).on('click', '#view_btn_stds', function(e) {
+$(document).on('click', '#view_btn_stds, #birthday_view_item', function(e) {
     var modal = '#myModalInfo';
     var view = '#web_content_info';
     var cat = 'students';
@@ -229,3 +268,28 @@ function CopyToClipboard(value, showNotification, notificationText) {
         });
     }
 }
+
+/*
+$(document).on('click', '#hall_submit', function(e) {
+           e.preventDefault();
+    var hall = $('#hall_name_select').val();
+    console.log('hall_submit');
+    $('.spinner_log').show();
+    $.ajax({
+        type: 'GET',
+        url: 'inc/hall_entry.php',
+        data: { hall: hall },
+        dataType: 'json',
+        success: function(response) {
+            toastrOption();
+            if (response.error) {
+                toastr.error(response.message);
+            } else {
+                toastr.success(response.message);
+                location.reload();
+                console.log('hall_submit_Success');
+            }
+        }
+    });
+});
+*/
