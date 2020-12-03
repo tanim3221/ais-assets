@@ -268,28 +268,3 @@ function CopyToClipboard(value, showNotification, notificationText) {
         });
     }
 }
-
-/*
-$(document).on('click', '#hall_submit', function(e) {
-           e.preventDefault();
-    var hall = $('#hall_name_select').val();
-    console.log('hall_submit');
-    $('.spinner_log').show();
-    $.ajax({
-        type: 'GET',
-        url: 'inc/hall_entry.php',
-        data: { hall: hall },
-        dataType: 'json',
-        success: function(response) {
-            toastrOption();
-            if (response.error) {
-                toastr.error(response.message);
-            } else {
-                toastr.success(response.message);
-                location.reload();
-                console.log('hall_submit_Success');
-            }
-        }
-    });
-});
-*/

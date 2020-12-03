@@ -412,6 +412,10 @@ div#code-side pre {
     white-space: normal
 }
 
+.loggedin-body {
+    background: #fff;
+}
+
 span.big,
 span.small {
     color: #473c9b!important;
@@ -803,6 +807,10 @@ body {
 .text_title_loggedin {
     font-size: 40px;
     letter-spacing: 6px;
+}
+
+.search_results_view {
+    padding: 10px 15px;
 }
 
 .row.c {

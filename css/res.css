@@ -11,9 +11,11 @@
     }
     #ais_family_wrapper {
         margin-top: 0;
+        margin-bottom: 100px;
     }
     .info-text {
         margin: 0 auto 45px auto !important;
+        padding: 0px 15px;
     }
     .navbar .megamenu {
         width: 100%;
@@ -37,6 +39,7 @@
     .ais_member_nav.fixed_nav_ais {
         width: 100%;
         right: 50%;
+        top: 0;
         transform: translate(50%);
     }
     .card_wrong_info_report .close_btn {
@@ -97,9 +100,6 @@
         top: 162px;
         display: block;
     }
-    #nbc-searchbluesubmit1 {
-        width: unset;
-    }
     .error.card-section {
         width: 100%;
         padding: 15px;
@@ -153,6 +153,7 @@
     .home_all_search {
         position: relative;
         left: 50%;
+        margin: 0;
         transform: translate(-50%, -50%);
     }
     #batch_select_gallery {
@@ -279,6 +280,7 @@
     }
     .update_box {
         margin-top: 15px;
+        margin-bottom: 100px;
     }
     .not_found_alert {
         width: 100%;
@@ -340,19 +342,25 @@
     input#wc-searchblueinput1 {
         width: 100%;
         float: unset;
+        border-radius: 5px 5px 0px 0px;
+        margin: 0;
         padding: 20px 15px;
+        border: 1px solid #ddd;
+    }
+    input#wc-searchblueinput1:hover {
+        border-color: #ddd;
     }
     .search-home {
         width: 100%;
         margin: 0 auto;
     }
-    body.loggedin {
-        /*width: 90%;*/
-    }
     body,
     html {
         width: 100% !important;
         margin-top: 0;
+    }
+    html {
+        background: #fff!important;
     }
     .change-photo-button {
         padding: 6px 15px;
@@ -372,7 +380,6 @@
         display: block;
         font-size: 28px;
         font-weight: 400;
-        margin-top: 20px;
     }
     span.big {
         display: none;
@@ -472,14 +479,16 @@
         line-height: 55px;
     }
     #nbc-searchbluesubmit1 {
-        border: none;
+        border: #130677;
         color: #ffffff;
         font-size: 12px;
         background: #130677;
         padding: 10px;
         font-weight: bold;
-        border-radius: 5px;
-        float: left;
+        border-radius: 0px 0px 5px 5px;
+        margin: 0;
+        width: 100%;
+        float: unset;
         height: 40px !important;
     }
     .btn-group-lg>.btn,
@@ -703,7 +712,7 @@
         font-weight: 600;
     }
     .item_view_nav:last-child {
-        margin-bottom: 130px;
+        margin-bottom: 200px!important;
     }
     .item_view_nav:hover {
         background: rgb(240, 240, 240);
@@ -780,12 +789,11 @@
     .loogedin_info_edit_left_right,
     .desktop_gallery_view_content,
     .mobile_gallery_view_content,
-    .iconic-body,
     #birthday_view_item:last-child,
     .loggedin_more_view.users_loggedin_info_view.item_view_nav,
     .about_more_view.about_database.item_view_nav,
     .log_more_view.activity_log.item_view_nav {
-        margin-bottom: 120px!important;
+        margin-bottom: 150px!important;
     }
     .body_wrapper_custom {
         box-shadow: none;
@@ -794,7 +802,7 @@
         margin-bottom: 60px!important;
     }
     .gallery_update_view {
-        margin-bottom: 120px;
+        margin-bottom: 150px;
     }
     .link_more_view.important_links.item_view_nav:hover,
     .log_more_view.activity_log.item_view_nav:hover,
@@ -823,6 +831,11 @@
     }
     .modal-header h4 {
         font-size: 18px;
+    }
+    .search_input_cat {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .center-login.add_info_users.container.add_teachers_info {
         width: 95%;
@@ -945,6 +958,9 @@
         position: relative;
         display: inline-block;
         margin: 0;
+    }
+    #nbc-searchbluesubmit1 {
+        text-indent: 45%;
     }
     h2.header {
         margin: 28px auto;
