@@ -268,3 +268,10 @@ function CopyToClipboard(value, showNotification, notificationText) {
         });
     }
 }
+
+$(function() {
+    $('#iframe_view_file').load(function() {
+        $('.spinner_log_load').hide();
+        console.log('File Loaded')
+    })
+});
