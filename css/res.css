@@ -14,8 +14,7 @@
         margin-bottom: 100px;
     }
     .info-text {
-        margin: 0 auto 45px auto !important;
-        padding: 0px 15px;
+        padding: 0px;
     }
     .navbar .megamenu {
         width: 100%;
@@ -339,16 +338,67 @@
     .edit-form {
         padding: 15px 15px;
     }
+    #nbc-searchbluesubmit1:focus {
+        border: 0;
+    }
+    #nbc-searchbluesubmit1 {
+        border: #130677;
+        color: #ffffff;
+        font-size: 12px;
+        background: #130677;
+        padding: 10px;
+        font-weight: bold;
+        border-radius: 0px 0px 15px 15px;
+        margin: 0;
+        width: 100%;
+        float: unset;
+        height: 40px !important;
+    }
+    .saerch_form_view {
+        margin-bottom: 15px;
+    }
     input#wc-searchblueinput1 {
         width: 100%;
         float: unset;
-        border-radius: 5px 5px 0px 0px;
+        border-radius: 15px 15px 0px 0px;
         margin: 0;
         padding: 20px 15px;
         border: 1px solid #ddd;
     }
     input#wc-searchblueinput1:hover {
         border-color: #ddd;
+    }
+    .search_input_cat .custom-select:focus {
+        border: 0;
+        box-shadow: none;
+    }
+    /*
+    // for Readymade select option bootstrap
+    [data-id=nbc-searchbluesubmit1] {
+        position: relative!important;
+        top: 0;
+        right: 0;
+        width: 100%!important;
+        border-radius: 0 0 15px 15px !important;
+        height: 42px!important;
+        padding: 10px 20px;
+    }
+    input#wc-searchblueinput1 {
+        border-radius: 15px 15px 0 0;
+    }
+    .search_input_cat .bootstrap-select .dropdown-menu {
+        min-width: auto;
+        width: 100%;
+    }
+    .search_input_cat .dropup .dropdown-menu {
+        border-radius: 15px 15px 0px 0px!important;
+    }
+    .search_input_cat .dropdown-menu {
+        border-radius: 15px!important;
+    }
+    */
+    .head_title_home h2 {
+        font-size: 32px;
     }
     .search-home {
         width: 100%;
@@ -370,21 +420,14 @@
         width: 90%!important;
         margin: 0 auto;
     }
+    /*  
     #myBtn {
-        bottom: 70px;
-        right: 21px;
+        bottom: 29px;
+        right: 10px;
         height: 45px;
         width: 45px;
     }
-    span.small {
-        display: block;
-        font-size: 28px;
-        font-weight: 400;
-    }
-    span.big {
-        display: none;
-    }
-    /*.content h2 span {
+   .content h2 span {
    visibility: hidden;
 }
 
@@ -477,19 +520,6 @@
         font-weight: 700;
         font-size: 30px;
         line-height: 55px;
-    }
-    #nbc-searchbluesubmit1 {
-        border: #130677;
-        color: #ffffff;
-        font-size: 12px;
-        background: #130677;
-        padding: 10px;
-        font-weight: bold;
-        border-radius: 0px 0px 5px 5px;
-        margin: 0;
-        width: 100%;
-        float: unset;
-        height: 40px !important;
     }
     .btn-group-lg>.btn,
     .btn-lg {
@@ -788,8 +818,11 @@
     .explore_more_content_main,
     .loogedin_info_edit_left_right,
     .desktop_gallery_view_content,
-    .mobile_gallery_view_content,
     #birthday_view_item:last-child,
+    li.bspHasModal:last-child,
+    .learn_card_row,
+    .value-details,
+    .admin_info_report_page,
     .loggedin_more_view.users_loggedin_info_view.item_view_nav,
     .about_more_view.about_database.item_view_nav,
     .log_more_view.activity_log.item_view_nav {
@@ -880,7 +913,6 @@
     }
     #bsPhotoGalleryModal .modal-dialog img {
         border-radius: 0;
-        height: 100%;
     }
     .inside_spin .spinner_log {
         top: 0;
@@ -958,9 +990,6 @@
         position: relative;
         display: inline-block;
         margin: 0;
-    }
-    #nbc-searchbluesubmit1 {
-        text-indent: 45%;
     }
     h2.header {
         margin: 28px auto;

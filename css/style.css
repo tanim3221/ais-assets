@@ -416,8 +416,8 @@ div#code-side pre {
     background: #fff;
 }
 
-span.big,
-span.small {
+.head-big,
+.head-small {
     color: #473c9b!important;
 }
 
@@ -429,6 +429,14 @@ span.small {
     text-align: center;
     font-family: Titillium Web, Hind Siliguri;
     font-weight: 700;
+    padding: 15px;
+}
+
+.head_title_home h2 {
+    font-size: 45px;
+    color: #130677;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .show_hide_ais {
@@ -810,7 +818,7 @@ body {
 }
 
 .search_results_view {
-    padding: 10px 15px;
+    padding: 10px 15px 30px 15px;
 }
 
 .row.c {
@@ -867,14 +875,6 @@ a.edit_button {
 
 td.btn_pad {
     margin-top: 5px;
-}
-
-span.small {
-    display: none;
-}
-
-span.big {
-    display: block;
 }
 
 select.form-control {
@@ -955,7 +955,6 @@ a.user-pass {
 .iconic-body {
     background-color: #fff;
     border-radius: .25rem;
-    padding: 100px 15px !important;
 }
 
 .change-info-button:hover {
@@ -1051,7 +1050,7 @@ img.img-top {
     display: inline;
 }
 
-button#nbc-searchbluesubmit1:focus {
+[data-id="nbc-searchbluesubmit1"]:focus {
     outline: none;
 }
 
@@ -1095,7 +1094,7 @@ div#myDropdown p {
 .info-text {
     text-align: center;
     border: none!important;
-    margin: 0px auto 45px auto!important;
+    margin: 0px auto 15px auto!important;
     color: #130677;
 }
 
@@ -1220,6 +1219,8 @@ div#textbox {
     font-weight: bold;
 }
 
+
+/*
 #myBtn i {
     color: #fff;
     margin: 0;
@@ -1232,9 +1233,9 @@ div#textbox {
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
-
 #myBtn {
     display: none;
+    position: absolute;
     position: fixed;
     bottom: 29px;
     right: 29px;
@@ -1254,6 +1255,7 @@ div#textbox {
     background-color: #130677;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+*/
 
 table {
     text-align: center;
@@ -1390,44 +1392,93 @@ p.error {
 .search-home {
     width: 80%;
     margin: 0 auto;
+    position: relative;
 }
 
-#nbc-searchbluesubmit1 {
-    border: none;
+[data-id="nbc-searchbluesubmit1"] {
+    border: none!important;
     color: #ffffff;
     font-size: 14px;
     background: #130677;
-    border: none;
+    border: none!important;
     padding: 20px 15px;
     font-weight: bold;
-    border-radius: 6px;
-    float: right;
-    width: 29%;
-    margin-bottom: 20px;
+    border-radius: 0px 30px 30px 0px !important;
+    width: 19%!important;
     height: 60px !important;
-    text-align: center;
+    text-align: center!important;
 }
 
-#nbc-searchbluesubmit1 option {
+.search_input_cat .dropdown-item.active,
+.search_input_cat .dropdown-item:active {
+    background-color: #130677;
+}
+
+.search_input_cat .dropdown-item.active:hover,
+.search_input_cat .dropdown-item:active:hover {
+    color: #fff;
+}
+
+.search_input_cat .btn:hover {
+    color: #fff;
+}
+
+.search_input_cat .dropup .dropdown-menu {
+    border-radius: 30px 30px 30px 0px!important;
+}
+
+.search_input_cat .dropdown-menu {
+    border-radius: 0px 30px 30px 30px!important;
+}
+
+.search_input_cat .btn.focus,
+.search_input_cat .btn:focus {
+    box-shadow: none!important;
+}
+
+.search_input_cat select.mobile-device:focus+.dropdown-toggle,
+.search_input_cat .dropdown-toggle:focus {
+    outline: 0!important;
+    outline: 0!important;
+    outline-offset: 0!important;
+}
+
+.search_input_cat .dropdown-toggle::after {
+    display: none!important;
+}
+
+.search_input_cat .bootstrap-select .dropdown-menu {
+    min-width: auto;
+}
+
+[data-id="nbc-searchbluesubmit1"] {
+    position: absolute!important;
+    top: -60px;
+    right: 0px;
+}
+
+[data-id="nbc-searchbluesubmit1"] option {
     background: #fff;
     color: #000;
 }
 
-#nbc-searchbluesubmit1:hover {
+[data-id="nbc-searchbluesubmit1"]:hover {
     background: #473c9b;
 }
 
+.content.iconic-body {
+    padding: 50px 0px;
+}
+
 input#wc-searchblueinput1 {
-    width: 70%;
-    float: left;
+    width: 100%;
     border: none;
-    padding: 20px 15px;
+    padding: 20px 30px;
     background: #ffffff;
     color: #000;
     font: 14px verdana;
     outline: none;
-    border-radius: 9px;
-    margin-bottom: 14px;
+    border-radius: 30px;
     border: 1px solid #ddd;
     height: 60px !important;
 }
