@@ -213,6 +213,14 @@ $(document).on('click', '#today_login_info_batch_wise', function(e) {
     getDetailsViewInfo(url, modal, view);
 });
 
+$(document).on('click', '#activity_log_view', function(e) {
+    var modal = '#myModalActivityInfo';
+    var view = '#activity_view_info';
+    $('.modal_activity_view_info').html('My Activity Log');
+    var url = 'qr_generate.php?activitty_info_date_wise';
+    getDetailsViewInfo(url, modal, view);
+});
+
 function getDetailsViewInfo(url, modal, view) {
     $(modal).modal({
         show: true
