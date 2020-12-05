@@ -51,7 +51,7 @@ $(function() {
     $(document).on('click', '#birthday_view_title', function(e) {
             e.preventDefault();
             var date = $(this).data('date');
-            var title = 'Birthday Today';
+            var title = 'Birthday';
             var show = '.bd_wish_more_view';
             var hide = '.loggedin_more_view,.notifications,.wish_birthday,.explore_view, .mobile_nav_wrapper_search, .gallery_view,.more_view,.document_view, .log_more_view,  .about_more_view, .notice_explore_view, .link_more_view';
             viewWindow(title, show, hide);
