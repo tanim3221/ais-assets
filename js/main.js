@@ -9,7 +9,7 @@ $(function() {
         $("#explore_more, #myModalNotice, #myModal, #myModalFileUpload, #myModalActivityInfo").modal('hide');
         var title = 'Gallery';
         var show = '.gallery_view';
-        var hide = '.course_more_view_year,.course_more_view, .loggedin_more_view, .notifications,.wish_birthday, .bd_wish_more_view, .mobile_nav_wrapper_search,.document_view, .explore_view,.more_view, .log_more_view,  .notice_explore_view,.about_more_view, .link_more_view';
+        var hide = '.birth_more_all, .course_more_view_year,.course_more_view, .loggedin_more_view, .notifications,.wish_birthday, .bd_wish_more_view, .mobile_nav_wrapper_search,.document_view, .explore_view,.more_view, .log_more_view,  .notice_explore_view,.about_more_view, .link_more_view';
         viewWindow(title, show, hide);
         console.log('Gallery Tab');
     })
@@ -18,7 +18,7 @@ $(function() {
         $("#explore_more, #myModalNotice, #myModal, #myModalFileUpload, #myModalActivityInfo").modal('hide');
         var title = 'Document';
         var show = '.document_view';
-        var hide = '.course_more_view_year,.course_more_view,.loggedin_more_view,.notifications,.wish_birthday,.bd_wish_more_view, .mobile_nav_wrapper_search,.gallery_view,.explore_view,.more_view, .log_more_view, .notice_explore_view,.about_more_view, .link_more_view';
+        var hide = '.birth_more_all,.course_more_view_year,.course_more_view,.loggedin_more_view,.notifications,.wish_birthday,.bd_wish_more_view, .mobile_nav_wrapper_search,.gallery_view,.explore_view,.more_view, .log_more_view, .notice_explore_view,.about_more_view, .link_more_view';
         viewWindow(title, show, hide);
         console.log('Document Tab');
     })
