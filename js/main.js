@@ -27,7 +27,7 @@ $(function() {
         $("#explore_more, #myModalNotice, #myModal, #myModalFileUpload, #myModalActivityInfo").modal('hide');
         var title = 'More';
         var show = '.more_view';
-        var hide = '.course_more_view_year,.course_more_view,.loggedin_more_view,.notifications,.wish_birthday,.bd_wish_more_view, .mobile_nav_wrapper_search,.gallery_view,.explore_view,.document_view, .log_more_view,  .notice_explore_view ,.about_more_view, .link_more_view';
+        var hide = '.birth_more_all,.upcoming_title,.course_more_view_year,.course_more_view,.loggedin_more_view,.notifications,.wish_birthday,.bd_wish_more_view, .mobile_nav_wrapper_search,.gallery_view,.explore_view,.document_view, .log_more_view,  .notice_explore_view ,.about_more_view, .link_more_view';
         viewWindow(title, show, hide);
         console.log('More Tab');
     })
@@ -58,7 +58,7 @@ $(function() {
         $("#explore_more, #myModalNotice, #myModal, #myModalFileUpload, #myModalActivityInfo").modal('hide');
         var date = $(this).data('date');
         var title = 'Birthday';
-        var show = '.bd_wish_more_view';
+        var show = '.bd_wish_more_view, .birth_more_all';
         var hide = '.course_more_view_year,.course_more_view,.loggedin_more_view,.notifications,.wish_birthday,.explore_view, .mobile_nav_wrapper_search, .gallery_view,.more_view,.document_view, .log_more_view,  .about_more_view, .notice_explore_view, .link_more_view';
         viewWindow(title, show, hide);
         console.log(title + ' Tab');
@@ -69,7 +69,7 @@ $(function() {
         $("#explore_more, #myModalNotice, #myModal, #myModalFileUpload, #myModalActivityInfo").modal('hide');
         var title = 'AIS Courses';
         var show = '.course_more_view_year';
-        var hide = '.loggedin_more_view,.notifications,.wish_birthday,.explore_view, .mobile_nav_wrapper_search, .gallery_view,.more_view,.document_view, .log_more_view,  .about_more_view, .notice_explore_view, .link_more_view';
+        var hide = '.birth_more_all,.loggedin_more_view,.notifications,.wish_birthday,.explore_view, .mobile_nav_wrapper_search, .gallery_view,.more_view,.document_view, .log_more_view,  .about_more_view, .notice_explore_view, .link_more_view';
         viewWindow(title, show, hide);
         console.log(title + ' Tab');
     })
