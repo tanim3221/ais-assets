@@ -1802,6 +1802,7 @@ html {
     width: 50%;
     left: 50%;
     transform: translate(-50%);
+    overflow: hidden;
 }
 
 .mobile_nav_head {
@@ -1874,6 +1875,27 @@ html {
 
 .mobile_nav_content_middle {
     margin-left: 35px;
+}
+
+.pro_bd img {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+}
+
+.pro_bd {
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upcoming_title {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 5px 0px;
+    border-bottom: 1px solid #ddd;
+    padding: 5px 0px;
 }
 
 @media print {

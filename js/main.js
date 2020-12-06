@@ -6,33 +6,37 @@ $(function() {
 
     $(document).on('click', '.gallery_nav', function(e) {
         e.preventDefault();
+        $("#explore_more, #myModalNotice, #myModal, #myModalFileUpload, #myModalActivityInfo").modal('hide');
         var title = 'Gallery';
         var show = '.gallery_view';
-        var hide = '.loggedin_more_view, .notifications,.wish_birthday, .bd_wish_more_view, .mobile_nav_wrapper_search,.document_view, .explore_view,.more_view, .log_more_view,  .notice_explore_view,.about_more_view, .link_more_view';
+        var hide = '.course_more_view_year,.course_more_view, .loggedin_more_view, .notifications,.wish_birthday, .bd_wish_more_view, .mobile_nav_wrapper_search,.document_view, .explore_view,.more_view, .log_more_view,  .notice_explore_view,.about_more_view, .link_more_view';
         viewWindow(title, show, hide);
         console.log('Gallery Tab');
     })
     $(document).on('click', '.document_nav', function(e) {
         e.preventDefault();
+        $("#explore_more, #myModalNotice, #myModal, #myModalFileUpload, #myModalActivityInfo").modal('hide');
         var title = 'Document';
         var show = '.document_view';
-        var hide = '.loggedin_more_view,.notifications,.wish_birthday,.bd_wish_more_view, .mobile_nav_wrapper_search,.gallery_view,.explore_view,.more_view, .log_more_view, .notice_explore_view,.about_more_view, .link_more_view';
+        var hide = '.course_more_view_year,.course_more_view,.loggedin_more_view,.notifications,.wish_birthday,.bd_wish_more_view, .mobile_nav_wrapper_search,.gallery_view,.explore_view,.more_view, .log_more_view, .notice_explore_view,.about_more_view, .link_more_view';
         viewWindow(title, show, hide);
         console.log('Document Tab');
     })
     $(document).on('click', '.more_nav', function(e) {
         e.preventDefault();
+        $("#explore_more, #myModalNotice, #myModal, #myModalFileUpload, #myModalActivityInfo").modal('hide');
         var title = 'More';
         var show = '.more_view';
-        var hide = '.loggedin_more_view,.notifications,.wish_birthday,.bd_wish_more_view, .mobile_nav_wrapper_search,.gallery_view,.explore_view,.document_view, .log_more_view,  .notice_explore_view ,.about_more_view, .link_more_view';
+        var hide = '.course_more_view_year,.course_more_view,.loggedin_more_view,.notifications,.wish_birthday,.bd_wish_more_view, .mobile_nav_wrapper_search,.gallery_view,.explore_view,.document_view, .log_more_view,  .notice_explore_view ,.about_more_view, .link_more_view';
         viewWindow(title, show, hide);
         console.log('More Tab');
     })
     $(document).on('click', '.explore_nav', function(e) {
         e.preventDefault();
+        $("#explore_more, #myModalNotice, #myModal, #myModalFileUpload, #myModalActivityInfo").modal('hide');
         var title = 'Explore';
         var show = '.explore_view';
-        var hide = '.loggedin_more_view,.notifications,.wish_birthday,.bd_wish_more_view, .mobile_nav_wrapper_search, .gallery_view,.more_view,.document_view, .log_more_view,  .about_more_view, .notice_explore_view, .link_more_view';
+        var hide = '.course_more_view_year,.course_more_view,.loggedin_more_view,.notifications,.wish_birthday,.bd_wish_more_view, .mobile_nav_wrapper_search, .gallery_view,.more_view,.document_view, .log_more_view,  .about_more_view, .notice_explore_view, .link_more_view';
         var short_link = $('.explore_more_content').html();
         $('.all_batch_short_link').html(short_link);
         viewWindow(title, show, hide);
@@ -40,22 +44,69 @@ $(function() {
     })
     $(document).on('click', '.dropbtn_nav', function(e) {
         e.preventDefault();
+
         var title = $(this).data('name');
         var show = '.users_loggedin_info_view';
-        var hide = '.notifications,.wish_birthday,.bd_wish_more_view, .mobile_nav_wrapper_search, .gallery_view,.more_view,.document_view, .log_more_view,  .about_more_view, .notice_explore_view, .link_more_view';
+        var hide = '.course_more_view_year,.course_more_view,.notifications,.wish_birthday,.bd_wish_more_view, .mobile_nav_wrapper_search, .gallery_view,.more_view,.document_view, .log_more_view,  .about_more_view, .notice_explore_view, .link_more_view';
         var short_link = $('.users_loggedin_info').html();
         $('.users_loggedin_info_view').html(short_link);
         viewWindow(title, show, hide);
         console.log('LoggedIn Info Tab');
     })
     $(document).on('click', '#birthday_view_title', function(e) {
+        e.preventDefault();
+        $("#explore_more, #myModalNotice, #myModal, #myModalFileUpload, #myModalActivityInfo").modal('hide');
+        var date = $(this).data('date');
+        var title = 'Birthday';
+        var show = '.bd_wish_more_view';
+        var hide = '.course_more_view_year,.course_more_view,.loggedin_more_view,.notifications,.wish_birthday,.explore_view, .mobile_nav_wrapper_search, .gallery_view,.more_view,.document_view, .log_more_view,  .about_more_view, .notice_explore_view, .link_more_view';
+        viewWindow(title, show, hide);
+        console.log(title + ' Tab');
+    })
+
+    $(document).on('click', '#course_view_title', function(e) {
+        e.preventDefault();
+        $("#explore_more, #myModalNotice, #myModal, #myModalFileUpload, #myModalActivityInfo").modal('hide');
+        var title = 'AIS Courses';
+        var show = '.course_more_view_year';
+        var hide = '.loggedin_more_view,.notifications,.wish_birthday,.explore_view, .mobile_nav_wrapper_search, .gallery_view,.more_view,.document_view, .log_more_view,  .about_more_view, .notice_explore_view, .link_more_view';
+        viewWindow(title, show, hide);
+        console.log(title + ' Tab');
+    })
+
+    $(document).on('click', '#course_view_list', function(e) {
+        e.preventDefault();
+        var value = $(this).data('coursename');
+        var year = $(this).data('year');
+        CopyToClipboard(value);
+        var log = value + ' Copied!';
+        console.log(log);
+        $('.modal_activity_view_info').html(log);
+    })
+
+    $(document).on('click', '#course_view_year', function(e) {
             e.preventDefault();
-            var date = $(this).data('date');
-            var title = 'Birthday';
-            var show = '.bd_wish_more_view';
-            var hide = '.loggedin_more_view,.notifications,.wish_birthday,.explore_view, .mobile_nav_wrapper_search, .gallery_view,.more_view,.document_view, .log_more_view,  .about_more_view, .notice_explore_view, .link_more_view';
-            viewWindow(title, show, hide);
+            var modal = '#myModalActivityInfo';
+            var view = '#activity_view_info';
+            $(modal).modal({
+                show: true
+            });
+            $('.spinner_log').show();
+            var year = $(this).data('year');
+            var title = year + ' Courses';
+            $('.modal_activity_view_info').html(title);
             console.log(title + ' Tab');
+            $.ajax({
+                type: 'GET',
+                url: 'inc/get_course.php',
+                dataType: 'html',
+                data: { year: year },
+                success: function(response) {
+                    $(view).html(response);
+                    $('.spinner_log').hide();
+                    console.log("Course Success");
+                }
+            });
         })
         /*
             $(document).on('click', '#birthday_view_item', function(e) {
@@ -75,14 +126,14 @@ $(function() {
         e.preventDefault();
         var title = 'Notifications';
         var show = '.notifications';
-        var hide = '.loggedin_more_view,.wish_birthday,.bd_wish_more_view, .explore_view, .mobile_nav_wrapper_search, .gallery_view,.more_view,.document_view, .log_more_view,  .about_more_view, .notice_explore_view, .link_more_view';
+        var hide = '.course_more_view,.loggedin_more_view,.wish_birthday,.bd_wish_more_view, .explore_view, .mobile_nav_wrapper_search, .gallery_view,.more_view,.document_view, .log_more_view,  .about_more_view, .notice_explore_view, .link_more_view';
         viewWindow(title, show, hide);
         console.log(title + ' Tab');
     })
 
     $(document).on('click', '.search_nav', function(e) {
         e.preventDefault();
-        $("#explore_more, #myModalNotice, #myModal, #myModalFileUpload").modal('hide');
+        $("#explore_more, #myModalNotice, #myModal, #myModalFileUpload, #myModalActivityInfo").modal('hide');
         $('.mobile_nav_wrapper').hide();
         window.location = 'home.php?search_here#search_results';
         //$('.mobile_nav_wrapper_search').show();
