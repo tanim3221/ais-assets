@@ -972,6 +972,21 @@
         top: 0;
         transform: translate(-50%);
     }
+    .wish_them_popup {
+        position: fixed;
+        top: 0;
+        overflow: hidden;
+        padding: 0;
+        border-radius: 0px 0px 10px 10px;
+        left: initial;
+        max-height: 350px;
+        width: 100%;
+        z-index: 4050;
+        box-shadow: 0 10px 20px rgb(0 0 0 / 57%);
+    }
+    .wish_them_popup .mobile_nav_head {
+        padding: 15px 15px;
+    }
 }
 
 @media all and (max-width: 240px) {

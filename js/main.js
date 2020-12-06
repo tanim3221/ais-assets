@@ -192,6 +192,14 @@ $(function() {
         });
     })
 
+    getPopupToday();
+
+    function getPopupToday() {
+        var popup = $('.today_birthday_class').html();
+        $('.mobile_nav_title.popup').html('Wish your loved one a Happy Birthday now.');
+        $('.today_birthday_class_wrapper').html(popup);
+    }
+
     $(document).on('click', '#direct_key_search', function(e) {
         e.preventDefault();
         var cat = $(this).data('cat');
@@ -327,3 +335,35 @@ function CopyToClipboard(value, showNotification, notificationText) {
         });
     }
 }
+
+$(document).ready(function() {
+    var setCookie = function(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + "; " + expires;
+    }
+
+    var getCookie = function(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1);
+            if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+        }
+        return "";
+    }
+
+    jQuery(document).ready(function($) {
+        console.log(getCookie("bdpopupclosed"));
+        if (getCookie("bdpopupclosed") == "bdpopupclosed") {
+            //$(".wish_them_popup_wrapper").hide();
+        }
+
+        jQuery(".mobile_nav_close.popup").click(function() {
+            jQuery(".wish_them_popup_wrapper").remove();
+            setCookie("bdpopupclosed", "bdpopupclosed", 0.3);
+        });
+    });
+});

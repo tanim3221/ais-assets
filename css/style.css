@@ -1898,6 +1898,43 @@ html {
     padding: 5px 0px;
 }
 
+.today_birthday_class #birthday_view_item:last-child {
+    margin: 0 !important;
+}
+
+.wish_them_popup .mobile_nav_head {
+    padding: 10px 15px;
+}
+
+.wish_them_popup .mobile_nav_title {
+    font-size: 15px;
+}
+
+.wish_them_popup .today_birthday_class_wrapper {
+    max-height: 325px;
+    overflow: auto;
+    padding: 10px 15px;
+}
+
+.wish_them_popup .item_view_nav:hover {
+    background: #d7d7d729;
+    border-radius: 5px;
+}
+
+.wish_them_popup {
+    position: absolute;
+    top: 60px;
+    overflow: hidden;
+    background: rgb(83, 0, 154);
+    background: linear-gradient(20deg, rgba(83, 0, 154, 1) 34%, rgba(255, 107, 0, 1) 100%);
+    padding: 0;
+    color: #fff;
+    border-radius: 7px;
+    left: 115px;
+    max-height: 350px;
+    width: 30%;
+}
+
 @media print {
     body,
     html {
