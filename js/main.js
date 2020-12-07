@@ -196,7 +196,7 @@ $(function() {
 
     function getPopupToday() {
         var popup = $('.today_birthday_class').html();
-        $('.mobile_nav_title.popup').html('Wish your loved one a Happy Birthday now.');
+        $('.mobile_nav_title.popup').html('Wish your loved one a HAPPY BIRTHDAY now.');
         $('.today_birthday_class_wrapper').html(popup);
     }
 

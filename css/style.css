@@ -465,10 +465,6 @@ div#code-side pre {
     background: transparent;
 }
 
-.learn_card_class {
-    padding: 5px 10px;
-}
-
 .learn_icon .logo {
     border-radius: 0;
     width: 30px;
@@ -1947,14 +1943,14 @@ html {
 }
 
 .edit_side_file .card-columns.learn_card_row {
-    column-gap: 0;
+    column-gap: 15px;
     display: inline-block;
     column-count: 1;
     width: 100%;
 }
 
 .card-columns.learn_card_row {
-    column-gap: 0;
+    column-gap: 15px;
     display: inline-block;
 }
 
