@@ -367,3 +367,12 @@ $(document).ready(function() {
         });
     });
 });
+
+$(document).ready(function() {
+    $("#sort_search").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $(".learn_card_class").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+});

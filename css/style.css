@@ -456,7 +456,7 @@ div#code-side pre {
 }
 
 .tag.ais_files {
-    padding: 10px 0px;
+    margin-bottom: 10px;
 }
 
 .center-login.add_info_users.container.add_teachers_info {
@@ -466,7 +466,7 @@ div#code-side pre {
 }
 
 .learn_card_class {
-    padding: 15px;
+    padding: 5px 10px;
 }
 
 .learn_icon .logo {
@@ -1933,6 +1933,29 @@ html {
     left: 115px;
     max-height: 350px;
     width: 30%;
+}
+
+.course_name_tag {
+    margin-top: 8px;
+}
+
+.card-columns.controller_file {
+    column-count: 1;
+    column-gap: 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.edit_side_file .card-columns.learn_card_row {
+    column-gap: 0;
+    display: inline-block;
+    column-count: 1;
+    width: 100%;
+}
+
+.card-columns.learn_card_row {
+    column-gap: 0;
+    display: inline-block;
 }
 
 @media print {
