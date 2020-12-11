@@ -37,9 +37,9 @@
     }
     .ais_member_nav.fixed_nav_ais {
         width: 100%;
-        right: 50%;
         top: 0;
-        transform: translate(50%);
+        background-size: 200% !important;
+        background-position: center top !important;
     }
     .card_wrong_info_report .close_btn {
         right: 13px;
