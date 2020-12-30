@@ -353,6 +353,7 @@
         width: 100%;
         float: unset;
         height: 40px !important;
+        text-align: center;
     }
     .saerch_form_view {
         margin-bottom: 15px;
