@@ -279,6 +279,16 @@ $(document).on('click', '#activity_log_view', function(e) {
     var url = 'qr_generate.php?activitty_info_date_wise';
     getDetailsViewInfo(url, modal, view);
 });
+$(document).on('click', '#view_login_info', function(e) {
+    var login_id = $(this).data('id');
+    var name = $(this).data('name');
+    var time = $(this).data('time');
+    var modal = '#myModalActivityInfo';
+    var view = '#activity_view_info';
+    $('.modal_activity_view_info').html('Login Info of ' + name + ' [' + time + ']');
+    var url = 'qr_generate.php?mybatchlogin&logininfoid=' + login_id;
+    getDetailsViewInfo(url, modal, view);
+});
 
 function getDetailsViewInfo(url, modal, view) {
     $(modal).modal({
