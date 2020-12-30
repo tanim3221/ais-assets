@@ -1956,6 +1956,10 @@ html {
     display: inline-block;
 }
 
+.bootstrap-select .dropdown-toggle .filter-option-inner-inner {
+    text-align: center;
+}
+
 @media print {
     body,
     html {
