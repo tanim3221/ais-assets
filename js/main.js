@@ -279,6 +279,10 @@ $(document).on('click', '#activity_log_view', function(e) {
     var url = 'qr_generate.php?activitty_info_date_wise';
     getDetailsViewInfo(url, modal, view);
 });
+$(document).on('click', '#shortcut_menu', function(e) {
+    console.log('click on menu');
+    $('.shortcut_menu').toggle();
+})
 $(document).on('click', '#view_login_info', function(e) {
     var login_id = $(this).data('id');
     var name = $(this).data('name');

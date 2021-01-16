@@ -994,6 +994,26 @@
     .all_files_btn {
         margin-bottom: 10px;
     }
+    .others_controller {
+        position: absolute;
+        right: 20px;
+        display: block !important;
+        bottom: 10px;
+        z-index: 3;
+    }
+    .others_controller i {
+        font-size: 30px;
+        color: #fff;
+    }
+    .shortcut_menu {
+        position: absolute;
+        top: 130px;
+        z-index: 2;
+        display: none;
+    }
+    .shortcut_menu .list-group {
+        box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .2);
+    }
 }
 
 @media all and (max-width: 240px) {

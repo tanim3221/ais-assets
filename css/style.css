@@ -320,10 +320,8 @@ img.upload_gallery_img {
     padding-top: 20px;
 }
 
-#batch_select_gallery {
-    position: absolute;
-    left: 173px;
-    top: 17px;
+.others_controller {
+    display: none;
 }
 
 .upload-btn {
@@ -1938,8 +1936,8 @@ html {
 }
 
 .card-columns.controller_file {
-    column-count: 1;
-    column-gap: 0;
+    column-count: 3;
+    column-gap: 15px;
     display: inline-block;
     width: 100%;
 }
