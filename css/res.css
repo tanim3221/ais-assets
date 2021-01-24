@@ -453,9 +453,10 @@
     .center-login {
         position: relative;
         top: 20px;
-        width: 90%;
+        width: 100%;
         transform: inherit;
         left: inherit;
+        box-shadow: none;
     }
     .img-top {
         z-index: auto!important;
