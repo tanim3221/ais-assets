@@ -347,8 +347,9 @@
         font-size: 12px;
         background: #130677;
         padding: 10px;
+        line-height: inherit;
         font-weight: bold;
-        border-radius: 0px 0px 15px 15px;
+        border-radius: 0px 0px 15px 15px!important;
         margin: 0;
         width: 100%;
         float: unset;
@@ -513,7 +514,7 @@
         font-weight: bold;
     }
     #nbc-searchblue1 {
-        border-radius: 10px;
+        border-radius: 10px!important;
         width: 100%;
         margin: 0;
     }
