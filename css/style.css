@@ -1954,8 +1954,56 @@ html {
     display: inline-block;
 }
 
-.bootstrap-select .dropdown-toggle .filter-option-inner-inner {
+#nbc-searchblue1 .bootstrap-select .dropdown-toggle .filter-option-inner-inner {
     text-align: center;
+}
+
+input.form-control,
+select.form-control,
+textarea.form-control,
+select.custom-select,
+.bootstrap-select>.dropdown-toggle {
+    line-height: 30px;
+    border-radius: 15px!important;
+    overflow: hidden;
+}
+
+#nbc-searchblue1 .bootstrap-select>.dropdown-toggle {
+    line-height: unset!important;
+    border-radius: 0px 30px 30px 0px!important;
+}
+
+.input-group>.custom-select:not(:last-child),
+.input-group>.form-control:not(:last-child) {
+    border-top-right-radius: 0!important;
+    border-bottom-right-radius: 0!important;
+}
+
+.input-group>.input-group-append>.btn,
+.input-group>.input-group-append>.input-group-text,
+.input-group>.input-group-prepend:first-child>.btn:not(:first-child),
+.input-group>.input-group-prepend:first-child>.input-group-text:not(:first-child),
+.input-group>.input-group-prepend:not(:first-child)>.btn,
+.input-group>.input-group-prepend:not(:first-child)>.input-group-text {
+    border-top-left-radius: 0!important;
+    border-bottom-left-radius: 0!important;
+    border-top-right-radius: 30px!important;
+    border-bottom-right-radius: 30px!important;
+}
+
+#ais_family_gallery .gallery_photo .photo_img {
+    height: 100px;
+}
+
+select.custom-select,
+select.form-control {
+    height: 42px;
+}
+
+.form-control {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    height: unset;
 }
 
 @media print {
