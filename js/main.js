@@ -246,6 +246,14 @@ $(document).on('click', '#view_btn_tea', function(e) {
     var url = 'qr_generate.php?' + cat + '&id=' + id;
     getDetailsViewInfo(url, modal, view);
 });
+$(document).on('click', '#view_btn_office_stuff', function(e) {
+    var modal = '#myModalInfo';
+    var view = '#web_content_info';
+    var cat = 'office_stuff';
+    var id = $(this).data('id');
+    var url = 'qr_generate.php?' + cat + '&id=' + id;
+    getDetailsViewInfo(url, modal, view);
+});
 $(document).on('click', '#login_info_batch_wise', function(e) {
     var modal = '#myModalLoginInfo';
     var view = '#login_view_info';
@@ -385,8 +393,81 @@ $(document).ready(function() {
 $(document).ready(function() {
     $("#sort_search").on("keyup", function() {
         var value = $(this).val().toLowerCase();
-        $(".learn_card_class").filter(function() {
+        $(".learn_card_class_ac, .learn_card_class").filter(function() {
             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
+    });
+});
+
+$(function() {
+    $('#selectType').on('change', function() {
+        if ($(this).val() === "file") {
+            $('#file_upload').show();
+            $('#file_link_upload').hide();
+            $('#file').attr('required', 'required');
+            $('#file_link_upload_input').removeAttr('required');
+
+        } else if ($(this).val() === "file_link") {
+            $('#file_link_upload').show();
+            $('#file_upload').hide();
+            $('#file_link_upload_input').attr('required', 'required');
+            $('#file').removeAttr('required');
+        }
+    });
+
+    $('#files_cat_select').on('change', function() {
+        if ($(this).val() === "add_new") {
+            $('#new_cat').show();
+            //$('#old_cat').hide();
+            $('#new_cat_input').attr('required', 'required');
+            $('#new_cat_input').attr('name', 'cat');
+            $('#files_cat_select').removeAttr('required');
+            $('#files_cat_select').removeAttr('name');
+
+        } else {
+            //$('#old_cat').show();
+            $('#new_cat').hide();
+            $('#files_cat_select').attr('required', 'required');
+            $('#files_cat_select').attr('name', 'cat');
+            $('#new_cat_input').removeAttr('required');
+            $('#new_cat_input').removeAttr('name');
+        }
+    });
+
+    $('#album_select').on('change', function() {
+        if ($(this).val() === "add_new") {
+            $('#new_album').show();
+            //$('#old_cat').hide();
+            $('#new_album_input').attr('required', 'required');
+            $('#new_album_input').attr('name', 'album');
+            $('#album_select').removeAttr('required');
+            $('#album_select').removeAttr('name');
+        } else {
+            //$('#old_cat').show();
+            $('#new_album').hide();
+            $('#album_select').attr('required', 'required');
+            $('#album_select').attr('name', 'album');
+            $('#new_album_input').removeAttr('required');
+            $('#new_album_input').removeAttr('name');
+        }
+    });
+
+    $('#files_year_select').on('change', function() {
+        if ($(this).val() === "add_new") {
+            $('#new_year').show();
+            //$('#old_year').hide();
+            $('#new_year_input').attr('required', 'required');
+            $('#new_year_input').attr('name', 'recommanded_year');
+            $('#files_year_select').removeAttr('required');
+            $('#files_year_select').removeAttr('name');
+
+        } else {
+            //$('#old_year').show();
+            $('#new_year').hide();
+            $('#files_year_select').attr('required', 'required');
+            $('#files_year_select').attr('name', 'recommanded_year');
+            $('#new_year_input').removeAttr('required');
+            $('#new_year_input').removeAttr('name');
+        }
     });
 });
