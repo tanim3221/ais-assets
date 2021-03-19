@@ -16,6 +16,10 @@
     .info-text {
         padding: 0px;
     }
+    #name-pro,
+    div#browser {
+        display: initial;
+    }
     .navbar .megamenu {
         width: 100%;
         padding: 20px;
